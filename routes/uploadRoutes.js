@@ -10,7 +10,7 @@ router.post('/', upload.single('image'), (req, res) => {
         }
 
         // Trả về đường dẫn ảnh
-        const imageUrl = `/public/images/${req.file.filename}`;
+        const imageUrl = `https://backendtmv.onrender.com/public/images/${req.file.filename}`;
         res.status(200).json({ url: imageUrl });
     } catch (error) {
         res.status(500).json({ error: error.message });
